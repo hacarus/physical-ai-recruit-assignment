@@ -1,0 +1,21 @@
+[project]
+name = "physical-ai-recruit-assignment"
+version = "0.1.0"
+description = "Recruit assignment for physical AI research interns"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "torch>=2.2",
+    "matplotlib>=3.8",
+]
+
+# GPU は不要なため、CPU 版の PyTorch を使用する (macOS は PyPI 版がそもそも CPU 版)
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu", marker = "sys_platform != 'darwin'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
