@@ -12,12 +12,12 @@ MAX_SPEED = 0.6  # 速度ベクトルのノルムの上限
 GOAL_RADIUS = 0.1  # goal からこの距離以内に入れば到達とみなす
 MAX_EPISODE_STEPS = 200
 
-START_X = -0.5
-GOAL_X = 0.5
-START_GOAL_Y_RANGE = 0.1  # start / goal の y 座標は [-0.1, 0.1] から一様に選ばれる
+START_CENTER = (-0.75, 0.0)
+GOAL_CENTER = (0.75, 0.0)
+START_GOAL_Y_RANGE = 0.1  # start / goal の y 座標は中心から [-0.1, 0.1] の範囲で一様に選ばれる
 
 # "wall" レイアウトの壁 (軸並行の長方形): (x_min, x_max, y_min, y_max)
-WALL_RECT = (-0.05, 0.05, -0.6, 0.6)
+WALL_RECT = (-0.3, 0.3, -0.6, 0.6)
 
 LAYOUTS = ("straight", "wall")
 
@@ -41,8 +41,8 @@ class PointNavEnv:
     def reset(self, seed: int | None = None) -> np.ndarray:
         if seed is not None:
             self.rng = np.random.default_rng(seed)
-        self.pos = np.array([START_X, self.rng.uniform(-START_GOAL_Y_RANGE, START_GOAL_Y_RANGE)])
-        self.goal = np.array([GOAL_X, self.rng.uniform(-START_GOAL_Y_RANGE, START_GOAL_Y_RANGE)])
+        self.pos = np.array(START_CENTER) + [0.0, self.rng.uniform(-START_GOAL_Y_RANGE, START_GOAL_Y_RANGE)]
+        self.goal = np.array(GOAL_CENTER) + [0.0, self.rng.uniform(-START_GOAL_Y_RANGE, START_GOAL_Y_RANGE)]
         self.t = 0
         return self._obs()
 

@@ -70,7 +70,7 @@ def main():
     parser.add_argument("--layout", choices=["straight", "wall"], required=True)
     parser.add_argument("--out", required=True)
     parser.add_argument("--log", required=True, help="エピソードごとの報酬合計を書き出す CSV")
-    parser.add_argument("--total-steps", type=int, default=1_000_000)
+    parser.add_argument("--total-steps", type=int, default=400_000)
     parser.add_argument("--num-envs", type=int, default=16)
     parser.add_argument("--num-steps", type=int, default=128, help="1 回の更新で各環境から集めるステップ数")
     parser.add_argument("--gamma", type=float, default=0.99)
