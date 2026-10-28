@@ -87,5 +87,5 @@ $ uv run python plot_learning_curve.py logs/straight.csv logs/wall.csv --out out
 
 ## 4. 提出物
 
-- `task2_rl/REPORT.md`: 上記 3.1, 3.2 の回答
+- 上記 3.1, 3.2 の回答 (形式は自由です)
 - 評価・調査に使用したコードと図

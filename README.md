@@ -48,14 +48,10 @@ $ uv run python rollout_example.py --ckpt checkpoints/cnn_straight.pt --layout s
 
 ### 提出方法
 
-- 各課題のディレクトリに `REPORT.md` を作成し、課題の回答を記述してください。**英語で書いても構いません**。
-  - 図を用いる場合は、画像ファイルもリポジトリに含めてください
-- 評価・調査のために作成したコードもリポジトリに含めてください
-- `git archive` 機能を使い、tar.gz に圧縮したものを提出してください
-
-```bash
-$ git archive HEAD --format=tar.gz -o submission.tar.gz
-```
+- 提出形式は自由です (Markdown, PDF, Jupyter Notebook, リポジトリの URL 等)。**英語で書いても構いません**
+- 以下を含めて提出してください
+  - 各課題の回答
+  - 評価・調査のために作成したコードと図
 
 ### 注意点
 

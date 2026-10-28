@@ -93,5 +93,5 @@ $ uv run python rollout_example.py --ckpt checkpoints/dit_wall.pt --layout wall
 
 ## 4. 提出物
 
-- `task1_imitation/REPORT.md`: 上記 3.1, 3.2 の回答
+- 上記 3.1, 3.2 の回答 (形式は自由です)
 - 評価・調査に使用したコードと図
