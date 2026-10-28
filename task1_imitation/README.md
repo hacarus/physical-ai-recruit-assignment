@@ -86,6 +86,7 @@ $ uv run python rollout_example.py --ckpt checkpoints/dit_wall.pt --layout wall
 ### 3.2. モデルの整理
 
 `CNNPolicy` と `DiTPolicy` のそれぞれについて、以下を簡単にまとめてください。
+機械学習を学んだことのない高校生にも伝わる程度の難易度で説明してください (数式や専門用語を使う場合は、その意味も説明してください)。
 
 - 何を入力として受け取るか
 - 何を出力するか (学習時と推論時の違いがあれば、それも含めて)
